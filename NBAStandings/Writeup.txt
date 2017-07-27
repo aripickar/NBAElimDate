@@ -1,0 +1,26 @@
+Initially, I tried to read the data in Python using Pandas. However, I
+found that the relatively limited ability in Python to order data in a
+list a detriment to the sorting of the teams. As a result, I decided to
+attempt this in Java. To make the list of teams and the characteristics
+of each game easier to parse, I decided that it would be better to copy
+all of the Games and Team Names into individual CSV files, where I
+could use a character delimiter to read the individual pages quickly.
+In approaching the task, I thought that it would be prudent try and
+make each of the components that could affect a team's playoff position.
+Therefore, I decided that creating an instance of a Team class for each
+team would be useful, where I could not just keep track of the wins and
+losses that the team had, but things like the wins and losses against
+each other team, potential worst case winning percentage checks, and
+possible winning percentages in a best case scenario. In checking if a
+team is eliminated from playoff contention, I used a PriorityQueue to
+first sort all of the teams. Any potential playoff three way ties would
+be sorted out due to this, meaning that I could just compare the last
+playoff team to the one that is potentially being eliminated. Comparing
+the best case scenario for each team to the worst case scenario for the
+last playoff team proved sufficient. When a team is eliminated from
+playoff contention, that team is marked as eliminated as to not be
+checked in the future, and is then written into the EliminationDates.csv
+file. To find the elimination dates to test on, I used google and
+https://www.basketball-reference.com/friv/standings.fcgi to get the
+standings on each day, and then calculated by hand the exact elimination
+dates. Hope to make it to the actual thing!!!
